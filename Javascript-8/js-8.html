@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-8</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button><a href="../index.html">Go Back</a></button>
+    <h1>Registration Form</h1>
+    <div class="table">
+      <table cellspacing="0" cellpadding="5">
+        <tr>
+          <td><label for="FirstName">First Name</label></td>
+          <td>
+            <input
+              type="text"
+              name="FirstName"
+              id="FirstName"
+              class="full"
+              onkeyup="checker(id ,'FirstName-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="FirstName-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="LastName">Last Name</label></td>
+          <td>
+            <input
+              type="text"
+              name="LastName"
+              id="LastName"
+              class="full"
+              onkeyup="checker(id ,'LastName-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="LastName-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="Email">Email</label></td>
+          <td>
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              class="full"
+              onkeyup="checker(id ,'email-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="email-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="full"
+              onkeyup="checker(id ,'password-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="password-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="Repassword">Re Password</label></td>
+          <td>
+            <input
+              type="password"
+              name="Repassword"
+              id="Repassword"
+              class="full"
+              onkeyup="passchecker(id,'repassword-errspace')"
+            />
+          </td>
+          <td class="errspace" id="repassword-errspace">Poor or Mismatched</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Gender</td>
+          <td>
+            <input type="radio" name="Gender" id="Male" />
+            <label for="Male">Male</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="Gender" id="female" />
+            <label for="Female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Age">Age</label></td>
+          <td>
+            <input
+              type="number"
+              name="Age"
+              id="Age"
+              min="1"
+              class="full"
+              onkeyup="checker(id ,'age-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="age-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="PhoneNumber">Phone Number</label></td>
+          <td>
+            <input
+              type="tel"
+              name="PhoneNumber"
+              id="PhoneNumber"
+              class="full"
+              onkeyup="checker(id ,'Phone-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="Phone-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="Address">Address</label></td>
+          <td>
+            <textarea
+              name="Address"
+              id="Address"
+              cols="30"
+              rows="5"
+              class="full"
+              onkeyup="checker(id ,'Address-errspace' )"
+            ></textarea>
+          </td>
+          <td class="errspace" id="Address-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="State">State</label></td>
+          <td>
+            <input
+              type="text"
+              name="State"
+              id="State"
+              class="full"
+              onkeyup="checker(id ,'State-errspace' )"
+            />
+          </td>
+          <td class="errspace" id="State-errspace">Poor</td>
+        </tr>
+        <tr>
+          <td><label for="Country">Country</label></td>
+          <td>
+            <select name="Country" id="Country">
+              <option value="Choose Your Country">Choose Your Country</option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="Uk">Uk</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="Language">Languages Known</label></td>
+          <td>
+            <input type="checkbox" name="English" id="Language" />
+            <label for="English">English</label>
+            <input type="checkbox" name="Kannada" id="Language" />
+            <label for="Kannada">Kannada</label>
+            <input type="checkbox" name="Hindi" id="Language" />
+            <label for="Hindi">Hindi</label>
+            <input type="checkbox" name="Telugu" id="Language" />
+            <label for="Telugu">Telugu</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" name="declaration" id="declaration" />
+            <label for="declaration"
+              >Hereby I declare all the given details are true</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" id="abc">
+            <span>Log in to</span>
+            <a href="https://ethnus.com/">Ethnus</a>
+            <span>Website</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="register">
+      <button class="btn">Register</button>
+    </div>
+
+    <script>
+      function checker(elemid, fieldid) {
+        console.log(typeof elemid);
+        console.log(typeof fieldid);
+
+        let a = document.getElementById(elemid).value;
+        console.log(a.length);
+
+        if (a.length > 0) {
+          document.getElementById(fieldid).innerHTML = " ";
+        } else {
+          document.getElementById(fieldid).innerHTML = "Poor";
+        }
+      }
+
+      function passchecker(elemid, fieldid) {
+        let a = document.getElementById(elemid).value;
+        let pas = document.getElementById("password").value;
+        if (a.length > 0 && a == pas) {
+          document.getElementById(fieldid).innerHTML = " ";
+        } else {
+          document.getElementById(fieldid).innerHTML = "Poor or mismatched";
+        }
+      }
+    </script>
+  </body>
+</html>

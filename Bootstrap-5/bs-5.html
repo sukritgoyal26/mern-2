@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta Username="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <button><a href="../index.html">go back</a></button>
+    <form class="needs-validation" novalidate>
+      <div class="form-elem">
+        <label for="FirstName" class="form-label">First Name</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-user"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            id="FirstName"
+            placeholder="First Name"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter First Name.</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="LastName" class="form-label">Last Name</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-user"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            id="LastName"
+            placeholder="Last Name"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Last Name.</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="email" class="form-label">Email</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-envelope"></i
+          ></span>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Email"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Email.</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="tel" class="form-label">Phone number</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-phone"></i
+          ></span>
+          <input
+            type="tel"
+            class="form-control"
+            id="tel"
+            placeholder="(845)555-1212"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Phone number.</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="address" class="form-label">Address</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-house"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="Address"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Address.</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="City" class="form-label">City</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-house"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            id="City"
+            placeholder="City"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please Enter City</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="State" class="form-label">State</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend"
+            ><i class="fa-solid fa-list"></i
+          ></span>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select your State</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <div class="invalid-feedback">Please Enter City</div>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="City" class="form-label">Do you have hosting ?</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> yes </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> no </label>
+        </div>
+      </div>
+
+      <div class="form-elem">
+        <label for="project description" class="form-label"
+          >project description</label
+        >
+        <div class="input-group has-validation">
+          <textarea
+            name="project description"
+            id="project description"
+            cols="50"
+            rows="3"
+          >
+project description</textarea
+          >
+        </div>
+      </div>
+
+      <div class="btn">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+    <script>
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/438305525a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

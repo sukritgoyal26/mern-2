@@ -1,0 +1,20 @@
+.track img{
+    border: 1px solid black;
+    position: relative;
+    animation-name: runner;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation: runner 5s linear 1s infinite ;
+    animation-play-state: paused;
+}
+
+@keyframes runner {
+    0%{left : -20%; }
+    100%{ left:100%;}
+}
+
+.track{
+    overflow: hidden;
+    border: 1px solid red;
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: #f7f7ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 70%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+
+.form-elem{
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+}
+label{
+    width: 30%;
+}
+.input-group{
+    width: 50%;
+}

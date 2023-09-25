@@ -1,0 +1,35 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 40%;
+    background-color: #F7F7F7;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    font-weight: 400;
+}
+
+input{
+    width:100%;
+}
+
+.form-select{
+    width: 100%;
+}
+
+div{
+    width: 100%;
+}
+
+.btn{
+    margin-top: 10px;
+    width: 100%;
+}

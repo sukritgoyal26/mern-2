@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(StringSort, 300);
+
+      function StringSort() {
+        let a = prompt("Enter a String : ");
+        let b = a.split("");
+        console.log(b);
+        b.sort();
+        console.log(b);
+        var ans = "";
+        for (x in b) {
+          ans += b[x];
+        }
+        alert("You enterd the String : " + a + " \nYou got : " + ans);
+      }
+    </script>
+  </body>
+</html>

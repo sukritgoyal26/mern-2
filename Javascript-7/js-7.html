@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-7</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="track">
+      <img
+        id="train-id"
+        src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1795137/steam-locomotive-clipart-sm.png"
+        alt="train"
+      />
+    </div>
+    <h2>Click the following buttons to handle the animation</h2>
+    <div class="btns">
+      <button id="Start" onclick="playFunction()">Start</button>
+      <button id="Stop" onclick="pauseFunction()">Stop</button>
+    </div>
+
+    <script>
+      function playFunction() {
+        document.getElementById("train-id").style.animationPlayState =
+          "running";
+      }
+      function pauseFunction() {
+        document.getElementById("train-id").style.animationPlayState = "paused";
+      }
+    </script>
+  </body>
+</html>

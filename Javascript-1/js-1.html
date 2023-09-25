@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button><a href="../index.html">Go Back</a></button>
+    <h1>IF YOU DONT GET A PROMPT PLEASE REFREASH THE PAGE</h1>
+
+    <script>
+      function rev() {
+        let string = prompt("enter a number");
+        let num = parseInt(string);
+        let rev = 0;
+        while (num >= 1) {
+          rev = rev * 10 + (num % 10);
+          num = Math.floor(num / 10);
+        }
+        alert("Reverse of number " + string + " is : " + parseInt(rev));
+      }
+
+      setTimeout(rev, 300);
+    </script>
+  </body>
+</html>

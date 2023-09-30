@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task-5</title>
   </head>
+
   <body>
     <div class="form">
-      <form action="submit">
+      <form onsubmit="return isvalid()" action="https://www.google.com/">
         <table>
           <tr>
             <td><label for="name">Name : </label></td>
@@ -23,12 +24,12 @@
           </tr>
           <tr>
             <td>Email :</td>
-            <td><input required type="email" name="email" id="email" /></td>
+            <td><input type="email" name="email" id="email" /></td>
             <td id="email-field"></td>
           </tr>
           <tr>
             <td><label for="website">website : </label></td>
-            <td><input required type="url" name="website" id="website" /></td>
+            <td><input type="url" name="website" id="website" /></td>
             <td id="website-field"></td>
           </tr>
           <tr>
@@ -39,10 +40,9 @@
                 id="message"
                 cols="30"
                 rows="3"
-                required
               ></textarea>
             </td>
-            <td id="msg-field"></td>
+            <td id="message-field"></td>
           </tr>
           <tr>
             <td></td>
@@ -55,17 +55,59 @@
     </div>
 
     <script>
-      function isvaid() {
+      function isvalid() {
         let name = document.getElementById("name").value;
         console.log(name + name.length);
-        let isvaid = true;
+        let isvalid = true;
         if (name.length == 0) {
+          document.getElementById("name").style.borderColor = "red";
           document.getElementById(
             "name-field"
           ).innerHTML = `<span style="color: red;">Please enter your name </span>`;
-          isvaid = false;
+          isvalid = false;
         } else {
+          document.getElementById("name").style.borderColor = "black";
           document.getElementById("name-field").innerHTML = ``;
+        }
+
+        let email = document.getElementById("email").value;
+        if (email.length == 0) {
+          document.getElementById("email").style.borderColor = "red";
+          document.getElementById(
+            "email-field"
+          ).innerHTML = `<span style="color: red; ">Please enter your email </span>`;
+          isvalid = false;
+        } else {
+          document.getElementById("email").style.borderColor = "black";
+          document.getElementById("email-field").innerHTML = ``;
+        }
+
+        let website = document.getElementById("website").value;
+        if (website.length == 0) {
+          document.getElementById("website").style.borderColor = "red";
+
+          document.getElementById(
+            "website-field"
+          ).innerHTML = `<span style="color: red;">Please enter your website </span>`;
+          isvalid = false;
+        } else {
+          document.getElementById("website").style.borderColor = "black";
+
+          document.getElementById("website-field").innerHTML = ``;
+        }
+
+        let message = document.getElementById("message").value;
+        if (message.length == 0) {
+          document.getElementById("message").style.borderColor = "red";
+
+          document.getElementById(
+            "message-field"
+          ).innerHTML = `<span style="color: red;">Please enter your message </span>`;
+          isvalid = false;
+        } else {
+          document.getElementById("message").style.borderColor = "black";
+
+          document.getElementById("message-field").innerHTML = ``;
         }
 
         return isvalid;

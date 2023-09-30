@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lobster&display=swap');
+
+
+body{
+    margin: 0%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    box-shadow: rgb(55, 55, 55) 0px 0px 15px  ;
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    border: 1px solid #dbdcde;
+    display: flex;
+    width:15vw;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    font-size: large;
+    margin: 10px;
+}
+
+.favicon-container{
+    display: flex;
+    background-color: #E8EBEE;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5px;
+}
+
+.input-container input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+
+    margin-left: 10px;
+}
+
+.btn{
+    width:15vw;
+    color: white;
+    height: 30px;
+    background-color:#007AFF;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.foot{
+    width:15vw;
+    font-size: small;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.p{
+    font-size: smaller;
+    font-weight: 400;
+}
+
+a{
+    color: #007AFF;
+    text-decoration: none;
+}
